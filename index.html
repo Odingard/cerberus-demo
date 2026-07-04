@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cerberus — Runtime Security for AI Agents</title>
+<meta name="description" content="Cerberus by Odingard Security — runtime security and governance for autonomous AI agents. Stops prompt-injection data theft at the tool boundary." />
+<style>
+  :root{
+    --bg:#0F172A; --bg2:#0b1120; --card:#111c33; --line:#1e2b47;
+    --sky:#0EA5E9; --cyan:#06B6D4; --slate:#94a3b8; --mist:#cbd5e1;
+    --white:#f8fafc; --green:#10B981; --red:#EF4444;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:radial-gradient(1200px 600px at 50% -10%, #16233f 0%, var(--bg) 55%, var(--bg2) 100%);
+    color:var(--mist);font-family:"Trebuchet MS",-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;min-height:100vh}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+  header{padding:56px 0 24px;text-align:center}
+  .mark{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px}
+  .mark .dot{width:14px;height:14px;border-radius:50%;background:var(--sky);box-shadow:0 0 18px var(--sky)}
+  .mark .co{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--slate)}
+  h1{font-size:54px;color:var(--white);letter-spacing:.04em;font-weight:bold;line-height:1.05}
+  h1 .accent{color:var(--sky)}
+  .tag{margin-top:16px;font-size:19px;color:var(--mist)}
+  .sub{margin-top:10px;font-size:15px;color:var(--slate)}
+  .cta{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:10px;
+    font-size:15px;font-weight:bold;text-decoration:none;border:1px solid var(--line);transition:.15s}
+  .btn-primary{background:var(--sky);color:#04121f;border-color:var(--sky)}
+  .btn-primary:hover{background:var(--cyan);border-color:var(--cyan)}
+  .btn-ghost{background:transparent;color:var(--mist)}
+  .btn-ghost:hover{border-color:var(--sky);color:var(--white)}
+  section{margin:52px 0}
+  .eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--sky);
+    text-align:center;margin-bottom:8px;font-weight:bold}
+  h2{font-size:28px;color:var(--white);text-align:center;font-weight:bold;letter-spacing:.02em}
+  .lead{text-align:center;color:var(--slate);max-width:680px;margin:12px auto 0;font-size:15px}
+  .frame{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:14px;
+    overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+  video{display:block;width:100%;height:auto;background:#000}
+  .deck-embed{width:100%;height:620px;border:0;background:#0b1120}
+  .row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+  .install{flex:1;min-width:280px;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:20px 22px}
+  .install .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-bottom:10px}
+  code{font-family:"DejaVu Sans Mono",Consolas,monospace;color:var(--cyan);font-size:15px}
+  .pill{display:inline-block;font-size:12px;color:var(--green);border:1px solid #1f5140;
+    background:#0e2a22;border-radius:999px;padding:3px 10px;margin-top:12px}
+  footer{margin:60px 0 40px;text-align:center;color:var(--slate);font-size:13px;border-top:1px solid var(--line);padding-top:24px}
+  footer strong{color:var(--mist)}
+  @media(max-width:640px){h1{font-size:38px}.deck-embed{height:460px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark">
+      <span class="dot"></span>
+      <span class="co">Odingard Security &nbsp;·&nbsp; Six Sense Enterprise Services</span>
+    </div>
+    <h1><span class="accent">CERBERUS</span></h1>
+    <div class="tag">Runtime security &amp; governance for autonomous AI agents.</div>
+    <div class="sub">We stop prompt-injection data theft at the tool boundary — before a single byte leaves the system.</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="#demo">▶ Watch the demo</a>
+      <a class="btn btn-ghost" href="#try">Try the open core</a>
+    </div>
+  </header>
+
+  <section id="demo">
+    <div class="eyebrow">Live Demo</div>
+    <h2>The same attack, with and without Cerberus</h2>
+    <p class="lead">An AI agent reads customer PII, ingests an injected web page, and tries to email the data out. Unprotected, it exfiltrates. With two lines of <code>guard()</code> added, Cerberus scores the Lethal Trifecta and interrupts the send — zero bytes leave.</p>
+    <div class="frame">
+      <video controls preload="metadata" poster="">
+        <source src="cerberus-demo.mp4" type="video/mp4" />
+        Your browser doesn't support embedded video — <a href="cerberus-demo.mp4">download the demo</a>.
+      </video>
+    </div>
+  </section>
+
+  <section id="try">
+    <div class="eyebrow">Open Core</div>
+    <h2>Ship it in two lines</h2>
+    <div class="row">
+      <div class="install">
+        <div class="k">npm</div>
+        <code>npm install @cerberus-ai/core</code>
+        <div class="pill">MIT · live</div>
+      </div>
+      <div class="install">
+        <div class="k">PyPI</div>
+        <code>pip install cerberus-ai</code>
+        <div class="pill">MIT · live</div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:22px">The MIT-licensed detection engine is free and open source. The durable cross-session provenance ledger and blast-radius containment ship in the enterprise gateway.</p>
+  </section>
+
+  <footer>
+    <strong>Cerberus</strong> — an <strong>Odingard Security</strong> product · Six Sense Enterprise Services<br/>
+    AI-native cybersecurity for the agentic era.
+  </footer>
+
+</div>
+</body>
+</html>
