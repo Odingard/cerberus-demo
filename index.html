@@ -40,6 +40,11 @@
   .frame{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:14px;
     overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45)}
   video{display:block;width:100%;height:auto;background:#000}
+  .video-embed{position:relative;width:100%;padding-top:56.25%;background:#000}
+  .video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+  .yt-link{text-align:center;margin-top:14px;font-size:14px;color:var(--slate)}
+  .yt-link a{color:var(--sky);text-decoration:none;font-weight:bold}
+  .yt-link a:hover{color:var(--cyan)}
   .deck-embed{width:100%;height:620px;border:0;background:#0b1120}
   .row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:26px}
   .install{flex:1;min-width:280px;background:var(--card);border:1px solid var(--line);
@@ -75,11 +80,11 @@
     <h2>One engine, four layers — the whole trifecta, and the blast radius after</h2>
     <p class="lead">First, the attack: an AI agent reads customer PII, ingests an injected web page, and tries to email the data out. Unprotected it exfiltrates; with two lines of <code>guard()</code> Cerberus scores the Lethal Trifecta and interrupts the send — zero bytes leave. Then the differentiator: <strong>Transitive Taint Propagation</strong> — when one poisoned write spreads through shared agent memory, Cerberus traces the blast radius <code>B(poison)</code> and quarantines exactly it, leaving clean records and the audit log intact.</p>
     <div class="frame">
-      <video controls preload="metadata" poster="">
-        <source src="cerberus-demo.mp4" type="video/mp4" />
-        Your browser doesn't support embedded video — <a href="cerberus-demo.mp4">download the demo</a>.
-      </video>
+      <div class="video-embed">
+        <iframe src="https://www.youtube-nocookie.com/embed/WtJvnCuQDig" title="Cerberus — Runtime Security for AI Agents (Live Demo)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
+    <p class="yt-link">Watch on YouTube: <a href="https://youtu.be/WtJvnCuQDig" target="_blank" rel="noopener">youtu.be/WtJvnCuQDig</a></p>
   </section>
 
   <section id="try">
