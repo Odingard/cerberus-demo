@@ -72,8 +72,8 @@
 
   <section id="demo">
     <div class="eyebrow">Live Demo</div>
-    <h2>The same attack, with and without Cerberus</h2>
-    <p class="lead">An AI agent reads customer PII, ingests an injected web page, and tries to email the data out. Unprotected, it exfiltrates. With two lines of <code>guard()</code> added, Cerberus scores the Lethal Trifecta and interrupts the send — zero bytes leave.</p>
+    <h2>One engine, four layers — the whole trifecta, and the blast radius after</h2>
+    <p class="lead">First, the attack: an AI agent reads customer PII, ingests an injected web page, and tries to email the data out. Unprotected it exfiltrates; with two lines of <code>guard()</code> Cerberus scores the Lethal Trifecta and interrupts the send — zero bytes leave. Then the differentiator: <strong>Transitive Taint Propagation</strong> — when one poisoned write spreads through shared agent memory, Cerberus traces the blast radius <code>B(poison)</code> and quarantines exactly it, leaving clean records and the audit log intact.</p>
     <div class="frame">
       <video controls preload="metadata" poster="">
         <source src="cerberus-demo.mp4" type="video/mp4" />
